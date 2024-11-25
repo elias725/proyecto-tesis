@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+
+
+    <header>
+        <h1>menu de navegacion</h1>
+        <nav>
+            <ul>
+                <li><a href = " {{ route ('CreateUser') }} ">Creacion de usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="{{ route('logout') }}"
            onclick="event.preventDefault();
@@ -17,12 +29,10 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
         </form>
+        
+
+        
     </div>
-
-    
-
-
-
  
 
 

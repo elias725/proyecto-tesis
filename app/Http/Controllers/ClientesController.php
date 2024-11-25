@@ -8,7 +8,12 @@ class ClientesController extends Controller
 { 
     public function index()
     {
-        return view('Clientes');
+        return view('Contador.Index');
+    }
+
+    public function view()
+    {
+        return view('Contador.view');
     }
 }
 
