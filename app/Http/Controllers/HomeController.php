@@ -53,6 +53,6 @@ class HomeController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        return redirect()->route('home')->with('success', 'Usuario creado con éxito.');
+        return redirect()->route('login')->with('success', 'Usuario creado con éxito.');
     }
 }

@@ -1,12 +1,9 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ClientesController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserCreateController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -30,15 +27,16 @@ Route::get('Clientes', ClientesController::class );*/
 
 Route::get('/', function () {
     return view('auth.login');
-});
+})->name('login');
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/home', 'index')->name('index');
-    Route::post('/home/UserCreation','registrar')->name('CreateUser');
+    Route::get('/home/registro', 'CreateUser')->name('CreateUser');
+    Route::post('/home/registrar','registrar')->name('registrar');
 });
 
 Route::controller(ClientesController::class)->group(function(){
-    Route::get('/Clientes','index')->name('index');
+    Route::get('/Clientes','index')->name('IndexContador');
     Route::get('/Clientes/view','view')->name('view');
 });
 

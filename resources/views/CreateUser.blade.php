@@ -53,12 +53,15 @@
 <body>
     <div class="form-container">
         <h1>Registro</h1>
-        <form action="{{ route('CreateUser') }}" method="post">
+        <form action="{{ route('registrar') }}"  method="post">
+            @csrf
+            @method('POST')
             <input id = "name" type="text" name="name" placeholder="Nombre de usuario" required>
             <input id = "email" type="email" name="email" placeholder="Correo electrónico" required>
             <input id = "password" type="password" name="password" placeholder="Contraseña" required>
             <button type="submit">Registrarse</button>
         </form>
+
     </div>
 </body>
 </html>

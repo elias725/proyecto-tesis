@@ -13,7 +13,7 @@
         <h1>menu de navegacion</h1>
         <nav>
             <ul>
-                <li><a href = " {{ route ('clientes') }} ">Clientes</a></li>
+                <li><a href = " {{ route ('view') }} ">Cliente</a></li>
             </ul>
         </nav>
     </header>
