@@ -1,32 +1,37 @@
-@extends('layouts.admin')
-
-@section('title', 'Admin')
-
-@section('content')
-    
- 
-
-@endsection
-
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>@yield('title')</title>
 </head>
 <body>
+    @yield('content')
 
+    <h1>Panel Admin</h1>
 
     <header>
-        <h1>menu de navegacion</h1>
+
+        <nav>
+            <ul>
+                <li><a href = " {{route('vista')}} ">Usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header>
+
+
+    
+    <header>
+
         <nav>
             <ul>
                 <li><a href = " {{ route ('CreateUser') }} ">Creacion de usuarios</a></li>
             </ul>
         </nav>
     </header>
+
 
 
     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -43,8 +48,5 @@
 
         
     </div>
- 
-
-
 </body>
-</html>-->
+</html>

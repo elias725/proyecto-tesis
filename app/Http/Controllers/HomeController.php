@@ -39,6 +39,11 @@ class HomeController extends Controller
         return view('CreateUser');
     }
 
+    public function vistaUser( )
+    {
+        return view('Usuarios');
+    }
+
     public function registrar(Request $request)
     {
         $request->validate([
